@@ -1,0 +1,1192 @@
+@import '../header.css';
+
+@import '../footer.css';
+
+body {
+    background-color: #F6F5F4;
+}
+
+.textbook {
+    padding-top: 128px;
+    
+}
+
+.textbook__header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 40px;
+}
+
+.textbook__title {
+    display: flex;
+    align-items: center;
+}
+
+.chapter__image {
+    margin-right: 10px;
+}
+
+.textbook__text {
+    color: #757575;
+    font-size: 26px;
+    
+}
+
+
+.chapter {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    border-right: 1.22px solid #E0E0E0;
+}
+
+.chapter:last-child {
+    padding-right: 0;
+    padding-left: 20px;
+    border: 0;
+}
+
+.chapter.active .textbook__text {
+    color: #000000;
+    fill: #000000;
+}
+
+.chapter.active .chapter__img {
+    fill: #000000;
+}
+
+
+
+.textbook__buttons {
+    display: flex;
+}
+
+.button__sprint {
+    margin-right: 10px;
+    padding: 14px 45px;
+    background-color: #F2D4DC;
+    border-radius: 14px;
+    position: relative;
+    transition: background-color .2s linear, color .2s linear;
+    text-decoration: none;
+    color: #945069;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.button__sprint:hover {
+    color: #ffffff;
+    background-color: #945069;;
+}
+
+.cross {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sprint__text {
+    text-align: center;
+    
+}
+
+.button__rupor {
+    padding: 14px 48px;
+    transition: background-color .2s linear, color .2s linear;
+    margin-right: 10px;
+    background-color: #C3DCE3;
+    border-radius: 14px;
+    text-decoration: none;
+    position: relative;
+    color: #2B788B;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.button__rupor:hover {
+    color: #ffffff;
+    background-color: #2B788B;
+}
+
+.audio__text {
+    text-align: center;
+    
+}
+
+.rupor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+}
+
+
+.settings {
+    cursor: pointer;
+    padding: 9.5px;
+    border: 0;
+    background-color: #F6F5F4;
+    border-radius: 4px;
+    color: #BABABA;
+    font-size: 20.71px;
+    transition: background-color .2s linear, color .2s linear;
+}
+
+.fa-gear {
+    font-size: 20.71px;
+}
+
+.settings:hover {
+    background-color: #2B788B;
+    color: #ffffff;
+}
+
+
+.urovni {
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 54px;
+}
+
+.urovni__item {
+    cursor: pointer;
+    display: flex;
+    margin-right: 40px;
+    position: relative;
+}
+
+.urovni__item:after {
+    transition: background-color .2s linear, color .2s linear;
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    bottom: -14px;
+}
+
+.urovni__item:last-child {
+    margin-right: 0;
+}
+
+.urovni__item:hover .urovni__text {
+    color: #000000;
+
+}
+
+.urovni__item:hover:after {
+    display: block;
+}
+
+.urovni__hard {
+    transition: background-color .2s linear, color .2s linear;
+    margin: auto 0;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.urovni__item:hover .urovni__hard--green {
+    background-color: rgba(99, 155, 109, 1);
+    color: #F6F5F4;
+}
+
+.urovni__item:hover .urovni__hard--yellow {
+    background-color: rgba(196, 162, 76, 1);
+    color: #F6F5F4;
+}
+
+.urovni__item:hover .urovni__hard--red {
+    color: #F6F5F4;
+    background-color: rgba(203, 91, 67, 1);
+}
+
+.urovni__text {
+    transition: background-color .2s linear, color .2s linear;
+    margin-right: 12px;
+    font-size: 26px;
+    color: #757575;
+}
+
+
+
+.urovni__hard--green {
+    background-color: rgba(99, 155, 109, 0.3);
+    color: #639B6D;
+}
+
+.urovni__hard--yellow {
+    background-color: rgba(196, 162, 76, 0.3);
+    color: #C4A24C;
+}
+
+.urovni__hard--red {
+    background-color: rgba(203, 91, 67, 0.3);
+    color: rgba(203, 91, 67, 1);
+}
+
+.urovni__item.active:after {
+    display: block;
+}
+
+.urovni__item.active .urovni__text {
+    color: #000000;
+}
+
+.urovni__item.active .urovni__hard--green {
+    background-color: rgba(99, 155, 109, 1);
+    color: #F6F5F4;
+}
+
+.urovni__item.active .urovni__hard--yellow {
+    background-color: rgba(196, 162, 76, 1);
+    color: #F6F5F4;
+}
+
+.urovni__item.active .urovni__hard--red {
+    color: #F6F5F4;
+    background-color: rgba(203, 91, 67, 1);
+}
+
+.courses {
+    padding: 0 127px;
+    
+}
+
+.courses__item {
+    display: flex;
+    height: 100%;
+    margin-bottom: 40px;
+
+}
+
+.courses__photo {
+    position: relative;
+    line-height: 0;
+    
+}
+
+.stat__center {
+
+}
+
+.courses__photo__stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 51px;
+    height: 98px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.courses__photo__stat__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+
+}
+
+.fa-bookmark {
+    margin-right: 8px;
+    color: #FFFFFF;
+}
+
+.fa-star {
+    margin-right: 8px;
+    color: #FFFFFF;
+}
+
+.fa-bolt {
+    margin-right: 8px;
+    color: #FFFFFF;
+}
+
+.courses__stat {
+    color: #FFFFFF;
+}
+
+.courses__content {
+    padding: 40px;
+    background-color: #FFFFFF;
+}
+
+.words {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.words__choose {
+    display: flex;
+    
+}
+
+.word1 {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.word2 {
+    font-size: 32px;
+    color: #757575;
+    line-height: 32px;
+}
+
+.slash {
+    font-size: 32px;
+    margin: 0 12px;
+    line-height: 32px;
+}
+
+.words__audio {
+    cursor: pointer;
+    transition: background-color .2s linear;
+    width: 40px;
+    height: 40px;
+    background-color: #F6F5F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.words__audio:hover {
+    background-color: #2B788B;
+}
+
+.words__svg {
+    transition: fill .2s linear;
+}
+
+.words__audio:hover .words__svg {
+    fill: #ffffff;
+}
+
+
+.transcription {
+    display: flex;
+    margin-bottom: 21.5px;
+}
+
+.transcription__text {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #000000;
+}
+
+.compound {
+    border: 0;
+    padding: 4px 12px;
+    background-color: #CB5B43;
+    color: #F6F5F4;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.words__text1 {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: -0.6px;
+    margin-bottom: 12px;
+}
+
+.words__text2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 100px;
+    margin-right: 20px;
+    transition: background-color .2s linear, color .2s linear;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+.btn--green {
+    background-color: rgba(99, 155, 109, 0.3);
+    color: #639B6D;
+}
+
+.btn--green:hover {
+    background-color: #639B6D;
+    color: #F6F5F4;
+}
+
+.btn--red {
+    background-color: rgba(203, 91, 67, 0.3);
+    color: #CB5B43;
+}
+
+.btn--red:hover {
+    background-color: #CB5B43;
+    color: #F6F5F4;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+}
+
+.number__item {
+    cursor: pointer;
+    transition: background-color .2s linear, color .2s linear;
+    border: 2px solid #5996A5;
+    border-radius: 50%;
+    margin-right: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #5996A5;
+}
+
+.number__item__points {
+    margin-right: 24px;
+}
+
+.number__item:hover {
+    background-color: #5996A5;
+    color: #ffffff;
+}
+
+.number__item.active {
+    background-color: #5996A5;
+    color: #ffffff;
+}
+
+@media(max-width: 1450px) {
+    .courses {
+        padding: 0 70px;
+    }
+
+    .courses__content {
+        padding: 25px;
+    }
+    
+}
+
+@media(max-width: 1260px) {
+    .textbook__header {
+        padding: 15px;
+    }
+    .chapter__img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .textbook__text {
+        font-size: 20px;
+    }
+
+    .urovni__item{
+        margin-right: 20px;
+    }
+
+    .urovni__text {
+        font-size: 23px;
+    }
+
+    .courses {
+        padding: 0 50px;
+    }
+
+    .courses__img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .courses__content {
+        padding: 20px;
+    }
+
+    .words__choose {
+        font-size: 27px;
+    }
+
+    .words__audio {
+        width: 35px;
+        height: 35px;
+    }
+
+    .transcription {
+        margin-bottom: 15px;
+    }
+
+    .transcription__text {
+        font-size: 16px;
+    }
+
+    .compound {
+        font-size: 12px;
+    }
+
+    .words__text1 {
+        font-size: 14px;
+    }
+
+    .words__text2 {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .textbook__header {
+        padding: 15px;
+    }
+    .chapter__img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .textbook__text {
+        font-size: 15px;
+    }
+
+    .button__rupor {
+        padding: 12px 43px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .button__sprint {
+        padding: 12px 40px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .rupor {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cross {
+        width: 35px;
+        height: 35px;
+    }
+
+    .urovni__item{
+        margin-right: 15px;
+    }
+
+    .urovni__text {
+        font-size: 20px;
+    }
+
+    .urovni__hard {
+        font-size: 10px;
+    }
+
+    .courses {
+        padding: 0 30px;
+    }
+
+    .courses__img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .courses__content {
+        padding: 15px;
+    }
+
+    .words {
+        margin-bottom: 9px;
+    }
+
+    .word1 {
+        font-size: 27px;
+    }
+
+    .word1 {
+        font-size: 27px;
+    }
+
+    .slash {
+        font-size: 27px;
+    }
+
+    .words__audio {
+        width: 30px;
+        height: 30px;
+    }
+
+    .transcription {
+        margin-bottom: 10px;
+    }
+
+    .transcription__text {
+        font-size: 14px;
+    }
+
+    .compound {
+        padding: 3px 8px;
+        font-size: 10px;
+        
+    }
+
+    .words__text1 {
+        font-size: 12px;
+    }
+
+    .words__text2 {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 775px) {
+    .textbook {
+        padding-top: 80px;
+    }
+
+    .textbook__header {
+        padding: 15px;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .textbook__title {
+        margin-bottom: 10px;
+    }
+
+    .chapter {
+        padding-right: 10px;
+    }
+
+    .urovni__item:after {
+        bottom: -10px;
+    }
+
+    .chapter:last-child {
+        padding-left: 10px;
+    }
+    .chapter__img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .textbook__text {
+        font-size: 11px;
+        line-height: 11px;
+    }
+
+    .button__rupor {
+        
+        padding: 7px 38px;
+        font-size: 10px;
+    }
+
+    .button__sprint {
+        padding: 7px 35px;
+        font-size: 10px;
+    }
+
+    .settings {
+        padding: 7px;
+        line-height: 13px;
+    }
+
+    .fa-gear {
+        
+        font-size: 13px;
+        
+    }
+
+    .rupor {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cross {
+        width: 25px;
+        height: 25px;
+    }
+
+    .urovni {
+        margin-bottom: 30px;
+    }
+
+    .urovni__item{
+        margin-right: 10px;
+    }
+
+    .urovni__text {
+        font-size: 15px;
+        line-height: 20px;
+        margin-right: 7px;
+    }
+
+    .urovni__hard {
+        font-size: 8px;
+        padding: 3px 5px;
+        
+    }
+
+    .courses {
+        padding: 0;
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .courses__photo {
+        display: flex;
+        width: 300px;
+    }
+
+    .courses__item {
+        flex-direction: column;
+        
+    }
+
+    .courses__content {
+        text-align: center;
+        width: 270px;
+    }
+
+    .courses__img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .word1 {
+        font-size: 23px;
+    }
+
+    .word2 {
+        font-size: 23px;
+    }
+
+    .slash {
+        font-size: 23px;
+    }
+
+    .words__audio {
+        width: 25px;
+        height: 25px;
+    }
+
+    .words__audio__svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .transcription {
+        justify-content: center;
+    }
+
+    .btn {
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    .number__item {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        margin-right: 20px;
+    }
+
+    .number__item__points {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 575px) {
+
+    .textbook__header {
+        padding: 10px;
+    }
+
+    .urovni__item:after {
+        bottom: -10px;
+    }
+
+    .chapter__image {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    .textbook__text {
+        font-size: 11px;
+        line-height: 11px;
+    }
+
+    .button__rupor {
+        
+        padding: 5px 25px;
+        font-size: 8px;
+    }
+
+    .button__sprint {
+        padding: 5px 30px;
+        font-size: 8px;
+    }
+
+    .settings {
+        padding: 5px;
+        line-height: 12px;
+    }
+
+    .fa-gear {
+        
+        font-size: 12px;
+        
+    }
+
+    .rupor {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cross {
+        width: 20px;
+        height: 20px;
+    }
+
+    .urovni {
+        margin-bottom: 25px;
+    }
+
+    .urovni__item{
+        margin-right: 8px;
+    }
+
+    .urovni__text {
+        font-size: 10px;
+        line-height: 10px;
+        margin-right: 5px;
+    }
+
+    .urovni__hard {
+        font-size: 6px;
+        padding: 2px 3px;
+        
+    }
+
+    .courses {
+        padding: 0;
+        text-align: center;
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    .courses__photo {
+        display: flex;
+        width: 260px;
+    }
+
+    .courses__item {
+        flex-direction: column;
+        
+    }
+
+    .courses__content {
+        padding: 10px;
+        text-align: center;
+        width: 240px;
+    }
+
+    .courses__img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .words {
+        margin-bottom: 5px;
+    }
+
+    .word1 {
+        font-size: 20px;
+    }
+
+    .word2 {
+        font-size: 20px;
+    }
+
+    .slash {
+        font-size: 20px;
+    }
+
+    .words__audio {
+        width: 20px;
+        height: 20px;
+    }
+
+    .words__audio__svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .transcription {
+        justify-content: center;
+    }
+
+    .transcription__text {
+        font-size: 12px;
+    }
+
+    .compound {
+        font-size: 8px;
+
+    }
+
+    .words__text1 {
+        font-size: 11px;
+    }
+
+    .words__text2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        font-size: 9px;
+        margin-right: 10px;
+    }
+
+    .courses__photo__stat {
+        width: 45px;
+        height: 80px;
+    }
+
+    .courses__photo__stat__item {
+        font-size: 12px;
+    }
+
+    .number__item {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    .number__item__points {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 360px) {
+    .container {
+        margin: 0 10px;
+    }
+
+    .textbook__header {
+        padding: 8px;
+    }
+
+    .urovni__item:after {
+        bottom: -8px;
+    }
+
+    .chapter__image {
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+
+    .chapter {
+        padding-right: 7px;
+    }
+
+    .chapter:last-child {
+        padding-left: 7px;
+    }
+
+    .settings {
+        padding: 3px;
+        line-height: 8px;
+    }
+
+    .fa-gear {
+        
+        font-size: 9px;
+        
+    }
+
+    .rupor {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cross {
+        width: 20px;
+        height: 20px;
+    }
+
+    .textbook__text {
+        font-size: 11px;
+        line-height: 11px;
+    }
+
+    .button__rupor {
+        padding: 3px 20px;
+        font-size: 6px;
+    }
+
+    .button__sprint {
+        padding: 3px 25px;
+        font-size: 6px;
+    }
+
+    
+
+    .urovni {
+        margin-bottom: 15px;
+    }
+
+    .urovni__item{
+        margin-right: 5px;
+    }
+
+    .urovni__item:after {
+        bottom: -5px;
+    }
+
+    .urovni__text {
+        font-size: 8px;
+        line-height: 8px;
+        margin-right: 3px;
+    }
+
+    .urovni__hard {
+        font-size: 5px;
+        padding: 2px 2px;
+        
+    }
+
+    .urovni__item:after {
+        bottom: -8px;
+    }
+
+    .courses {
+        width: 200px;
+    }
+
+    .courses__photo {
+        width: 200px;
+    }
+
+    .courses__item {
+        width: 200px;
+        
+    }
+
+    .courses__content {
+        padding: 10px;
+        text-align: center;
+        width: 180px;
+    }
+
+    .courses__img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .words {
+        margin-bottom: 5px;
+    }
+
+    .word1 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .word2 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .slash {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .words__audio {
+        width: 17px;
+        height: 17px;
+    }
+
+    .transcription {
+        margin-bottom: 7px;
+    }
+
+    .transcription__text {
+        font-size: 10px;
+    }
+
+    .compound {
+        font-size: 7px;
+        padding: 2px 6px;
+    }
+
+    .words__text1 {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .words__text2 {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn--green {
+        margin-bottom: 10px;
+    }
+
+    .courses__photo__stat {
+        width: 30px;
+        height: 60px;
+    }
+
+    .courses__photo__stat__item {
+        font-size: 8px;
+    }
+
+    .number__item {
+        width: 15px;
+        height: 15px;
+        font-size: 8px;
+        margin-right: 5px;
+    }
+
+    .number__item__points {
+        font-size: 8px;
+        margin-right: 5px;
+    }
+}

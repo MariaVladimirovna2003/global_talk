@@ -1,0 +1,652 @@
+@import url('../header.css');
+
+@import url('../footer.css');
+
+.container--stat {
+    padding: 0 197.75px;
+}
+
+body {
+    background-color: #F6F5F4;
+}
+
+.statistic__titles {
+    padding-top: 188px;
+    margin-bottom: 40px;
+}
+
+.statistic__titles__inner {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.statistic__title__item {
+    cursor: pointer;
+    transition: color .2s linear;
+    position: relative;
+    font-size: 26px;
+    color: #757575;
+    margin-right: 40px;
+}
+
+.statistic__title__item:hover {
+    color: #000000;
+}
+
+.statistic__title__item:last-child {
+    margin-right: 0;
+}
+
+
+.statistic__title__item:after {
+    display: none;
+    position: absolute;
+    content: '';
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    bottom: -14px;
+}
+
+.statistic__title__item:hover:after {
+    display: block;
+}
+
+.statistic__title__item.active {
+    color: #000000;
+}
+
+.statistic__title__item.active:after {
+    display: block;
+}
+
+.stat__content {
+    display: none;
+    
+    margin-bottom: 100px;
+    transition: all .2s linear;
+}
+
+
+.stat__content.active {
+    display: block;
+}
+
+.stat__content__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.stat__content1 {
+    padding: 40px;
+    background-color: #ffffff;
+    
+    margin-right: 10px;
+}
+
+.stat__texts__title {
+    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.stat__text {
+    margin-bottom: 20px;
+
+}
+
+.words__percents {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 46.24px;
+    margin-left: 46.24px;
+}
+
+.words__percents__item {
+    padding-right: 88.51px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1.22px solid #E0E0E0;
+}
+
+.words__percents__item:last-child {
+    padding-right: 0;
+    padding-left: 88.51px;
+}
+
+.words__percents__item:first-child {
+    border-left: 0;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 3px;
+}
+
+.number__ch {
+    font-size: 40px;
+}
+
+.number__sign {
+    font-size: 40px;
+    color: #2B788B;
+}
+
+.words__percents__text {
+    text-align: center;
+    font-size: 16px;
+}
+
+.stat__games {
+    
+}
+
+.stat__games__item {
+    display: flex;
+    border-bottom: 1.22px solid #E0E0E0;
+}
+
+.stat__games__item:first-child {
+    padding-bottom: 18px;
+}
+
+.stat__games__item:last-child {
+    padding-top: 18px;
+    border: 0;
+}
+
+.games__item__photo {
+    margin-right: 20px;
+}
+
+.games__item__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16.5px;
+    
+}
+
+.games__title {
+    margin-right: 8px;
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.speed__task {
+    padding: 4px 8px;
+    background-color: #C3DCE3;
+    color: #2B788B;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.games__title {
+    
+    font-size: 26px;
+}
+
+.games__text {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.ch {
+    color: #000000;
+}
+
+
+.stat__content2 {
+    background-color: #ffffff;
+    
+    padding: 40px;
+}
+
+@media(max-width: 1800px) {
+    .graph {
+        /*2.03*/
+        width: 710.5px;
+        height: 350px;
+    }
+
+    .stat__content1 {
+        padding: 30px;
+    }
+
+    .stat__content2 {
+        padding: 30px;
+    }
+
+    .container--stat {
+        padding: 0 120px;
+    }
+
+    .stat__text {
+        margin-bottom: 10px;
+    }
+
+    .words__percents {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+
+    .words__percents__item {
+        padding-right: 50px;
+    }
+
+    .words__percents__item:last-child {
+        padding-left: 50px;
+
+    }
+
+    .words__percents {
+        margin-bottom: 10px;
+    }
+
+    .words__percents__text {
+        font-size: 14px;
+    }
+    
+}
+
+@media(max-width: 1500px) {
+    .graph {
+        /*2.03*/
+        width: 568.4px;
+        height: 280px;
+    }
+
+    .stat__content1 {
+        padding: 20px;
+    }
+
+    .stat__texts__title {
+        font-size: 29px;
+        line-height: 29px;
+    }
+
+    .number__ch {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .number__sign {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .games__item__img {
+        /*1.6*/
+        width: 50px;
+        height: 80px;
+    }
+
+    .games__title {
+        font-size: 21px;
+    }
+
+    .games__text {
+        font-size: 14px;
+    }
+
+    .speed__task {
+        font-size: 10px;
+    }
+
+    .stat__content2 {
+        padding: 20px;
+
+    }
+
+    .container--stat {
+        padding: 0 120px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .container--stat {
+        padding: 0 50px;
+    }
+
+    .graph {
+        /*2.03*/
+        width: 446.6px;
+        height: 220px;
+    }
+
+    .stat__content1 {
+        padding: 15px;
+    }
+
+    .stat__games__item:first-child {
+        padding-bottom: 10px;
+    }
+
+    .stat__games__item:last-child {
+        padding-top: 10px;
+    }
+
+    .stat__texts__title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+
+    .stat__text {
+        font-size: 14px;
+    }
+
+    .number__ch {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .number__sign {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .words__percents__text {
+        font-size: 11px;
+    }
+
+    .games__item__img {
+        /*1.6*/
+        width: 40px;
+        height: 64px;
+    }
+
+    .games__item__title {
+        margin-bottom: 5px;
+    }
+
+    .games__title {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .games__text {
+        font-size: 10px;
+    }
+
+    .speed__task {
+        font-size: 7px;
+        padding: 3px 7px;
+    }
+
+
+    .stat__content2 {
+        padding: 15px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .container--stat {
+        padding: 0 50px;
+    }
+
+    .graph {
+        /*2.03*/
+        width: 365.4px;
+        height: 180px;
+    }
+
+    .stat__texts__title {
+        font-size: 21px;
+        line-height: 21px;
+        margin-bottom: 8px;
+    }
+
+    .stat__text {
+        font-size: 12px;
+    }
+
+    .number__ch {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .number__sign {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .words__percents {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .words__percents__item {
+        padding-right: 30px;
+    }
+
+    .words__percents__item:last-child {
+        padding-left: 30px;
+    }
+
+    .words__percents__text {
+        font-size: 10px;
+    }
+
+    .games__item__img {
+        /*1.6*/
+        width: 35px;
+        height: 56px;
+    }
+
+    .games__item__title {
+        margin-bottom: 5px;
+    }
+
+    .games__title {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .games__text {
+        font-size: 9px;
+    }
+
+    .speed__task {
+        font-size: 7px;
+        padding: 2px 7px;
+    }
+
+
+    .stat__content2 {
+        padding: 15px;
+    }
+}
+
+@media(max-width: 750px) {
+    .container--stat {
+        padding: 0 70px;
+    }
+    
+    .statistic__titles {
+        padding-top: 80px;
+    }
+
+    .stat__content__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .stat__content {
+        margin-bottom: 50px;
+    }
+
+    .stat__content1 {
+        margin-bottom: 15px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .stat__games__item {
+        justify-content: center;
+    }
+
+    .graph {
+        /*2.03*/
+        width: 406px;
+        height: 200px;
+    }
+
+
+    .stat__texts__title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+
+    .stat__text {
+        font-size: 14px;
+    }
+
+    .number__ch {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .number__sign {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .words__percents__text {
+        font-size: 11px;
+    }
+
+    .games__item__img {
+        /*1.6*/
+        width: 50px;
+        height: 80px;
+    }
+
+    .games__item__title {
+        margin-bottom: 5px;
+    }
+
+    .games__title {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .games__text {
+        font-size: 10px;
+    }
+
+    .speed__task {
+        font-size: 7px;
+        padding: 3px 7px;
+    }
+
+
+    .stat__content2 {
+        padding: 15px;
+    }
+}
+
+@media(max-width: 575px) {
+    .container {
+        margin: 0 15px;
+    }
+
+    .container--stat {
+        padding: 0 30px;
+    }
+
+    .statistic__title__item {
+        font-size: 14px;
+        line-height: 14px;
+        margin-right: 15px;
+    }
+
+    .stat__content__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .stat__content1 {
+        padding: 10px;
+    }
+
+    .graph {
+        /*2.03*/
+        width: 284.2px;
+        height: 140px;
+    }
+}
+
+@media(max-width: 575px) {
+    .container {
+        margin: 0 10px;
+    }
+
+    .container--stat {
+        padding: 0 15px;
+    }
+
+    .stat__content {
+        margin-bottom: 30px;
+    }
+
+    .statistic__titles {
+        padding-top: 65px;
+        margin-bottom: 30px;
+    }
+
+    .stat__texts__title {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .stat__text {
+        font-size: 12px;
+    }
+
+    .words__percents__item:first-child {
+        padding-right: 15px;
+    }
+
+    .words__percents__item:last-child {
+        padding-left: 15px;
+    }
+
+    .words__percents__text {
+        font-size: 10px;
+    }
+
+    .games__title {
+        font-size: 14px;
+    }
+    
+    .games__item__photo {
+        margin-right: 10px;
+    }
+
+    .games__text {
+        font-size: 9px;
+    }
+
+    .speed__task {
+        font-size: 6px;
+        padding: 3px 4px;
+    }
+
+
+    .graph {
+        /*2.03*/
+        width: 182.7px;
+        height: 90px;
+    }
+}

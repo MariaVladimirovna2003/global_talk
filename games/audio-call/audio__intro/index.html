@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Global Talk - TextBook</title>
+    <meta charset="utf-f">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a589528faf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="burger" type="button" id="burger">
+                <div class="burger__item"></div>
+            </button>
+            <nav class="nav" id="nav">
+                <a href="../../../home/index.html" class="nav__logo">GlobalTalk<a>
+                <a href="../../../home/index.html" class="nav__link">Home</a>
+                <a href="../../../Textbook/index.html" class="nav__link">TextBook</a>
+                <a href="../../../Statistic/index.html" class="nav__link">Statistic</a>
+                <div class="nav__link nav__link--games active" id="link__games">
+                    <div class="link__games__text">
+                        Games 
+                        <svg class="strela" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="strela__stroke" d="M0.812164 0.608887L4.27434 4.07126L7.73672 0.608887" stroke="#757575" stroke-width="1.6"/>
+                        </svg>
+                            
+                    </div>
+                    <div class="games__list">
+                        <a href="../../sprint_game/sprint_intro/index.html" class="game__link">Sprint</a>
+                        <a href="index.html" class="game__link">Audio-call</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="account">
+                <div class="account__icon">
+                    <svg class="account__svg" width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="account__icon__circle" x="0.0476074" width="41" height="40" rx="20" fill="#C3DCE3"/>
+                        <path class="account__icon__letter" d="M23.1266 23.6H17.9266L16.9346 26H14.2786L19.2706 14.8H21.8306L26.8386 26H24.1186L23.1266 23.6ZM22.3106 21.632L20.5346 17.344L18.7586 21.632H22.3106Z" fill="#2B788B"/>
+                    </svg>
+                </div>
+                <div class="account__name">Alex</div>
+                <div class="sign">Sign out→</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <div class="container">
+        <div class="content__inner">
+            <div class="content__photo">
+                <img src="../images/чел.png" alt="" class="content__img">
+            </div>
+            <div class="content__texts">
+                <div class="content__title">
+                    <h1 class="content__title__h1">Audio-Call</h1>
+                    <btn class="btn__audio">audition-task</btn>
+                </div>
+                <div class="content__text">The Audio-Call training develops vocabulary and improves listening comprehension.</div>
+                <div class="content__choose">
+                    <div class="choose__text">Choose a level:</div>
+                    <div class="choose__circles">
+                        <div class="circle circle--blue">A1</div>
+                        <div class="circle circle--yellow">A2</div>
+                        <div class="circle circle--orange">B1</div>
+                        <div class="circle circle--red">B2</div>
+                        <div class="circle circle--purple">C1</div>
+                        <div class="circle circle--green">C2</div>
+                    </div>
+                </div>
+                <a href="../game/index.html" class="btn__get__started">Get started</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__texts">
+                <div class="footer__links">
+                    <a href="../../../home/index.html" class="footer__link">Home</a>
+                    <a href="../../../Textbook/index.html" class="footer__link">TextBook</a>
+                    <a href="../../../Statistic/index.html" class="footer__link">Statistics</a>
+                    <a href="../../sprint_game/sprint_intro/index.html" class="footer__link">Sprint</a>
+                    <a href="../../audio-call/audio__intro/index.html" class="footer__link">Audio-call</a>
+                </div>
+                <div class="footer__names">
+                    <a class="footer__name">Alex</a>
+                    <a class="footer__name">Gabriel</a>
+                    <a class="footer__name">Marcus</a>
+                </div>
+            </div>
+            <div class="footer__socials">
+                <div class="footer__icons">
+                    <a class="footer__icon">
+                        <i class="fa-brands fa-github-alt"></i>
+                    </a>
+                    <a class="footer__icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="footer__icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="footer__about">©2021 GlobalTalk. Project for GlobalTalk.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../../../app.js"></script>
+</body>
+</html>

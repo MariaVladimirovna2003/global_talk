@@ -1,0 +1,639 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #757575;
+    letter-spacing: -0.7px;
+}
+
+h1 {
+    font-family: 'Dela Gothic One', sans-serif;
+    margin: 0;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #000000;
+}
+
+a {
+    margin: 0;
+}
+
+.container {
+    margin: 0 370px;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    z-index: 10000;
+}
+
+.header.fixed {
+    position: fixed;
+    background-color: #757575;
+    color: #E0E0E0;
+}
+
+
+.header.fixed .nav__link {
+    color: #E0E0E0;
+    stroke: #E0E0E0;
+} 
+
+.header.fixed .strela__stroke {
+    stroke: #E0E0E0;
+} 
+
+.header.fixed .nav__link.active {
+    color: #000000;
+    transition: all .2s linear;
+}
+
+.header.fixed .nav__link--games.active {
+    color: #000000;
+}
+
+.header.fixed .nav__link:hover, .strela__stroke {
+    color: #000000;
+}
+
+.header.fixed .header__inner {
+    padding: 10px 0;
+}
+
+
+.header__inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 24px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    color: #E0E0E0;
+}
+
+.nav__logo {
+    text-decoration: none;
+    margin-right: 60px;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 20.86px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: #000000;
+    line-height: 20.86px;
+}
+
+.nav__link {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 30px;
+    text-decoration: none;
+    color: #585858;
+    transition: color .2s linear;
+    line-height: 10px;
+}
+
+.nav__link:hover {
+    color: #000000;
+}
+
+.nav__link--games:hover .strela__stroke {
+    stroke: #000000;
+}
+
+.nav__link--games.active {
+    color: #000000;
+}
+
+.nav__link--games.active .strela__stroke {
+    stroke: #000000;
+}
+
+.nav__link.active {
+    color: #000000;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.nav__link--games {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.link__games__text {
+    display: flex;
+    align-items: center;
+}
+
+.strela {
+    margin-left: 3px;
+    transition: transform .2s linear;
+}
+
+.strela__stroke {
+    transition: stroke .2s linear;
+}
+
+.games__list {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background-color: #FFFFFF;
+    width: 160px;
+    padding-left: 20px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1500;
+    opacity: 0;
+    transition: all .4s linear;
+}
+
+.nav__link--games.show .games__list {
+    height: 55px;
+    opacity: 1;
+}
+
+.nav__link--games.show .strela {
+    transform: scaleY(-1);
+}
+
+.game__link {
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #828282;
+    white-space: nowrap;
+    transition: color .2s linear
+}
+
+.game__link:last-child {
+    margin-bottom: 0;
+}
+
+.game__link:hover {
+    color: #000000;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.account__icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    
+    
+}
+
+.account__icon__circle {
+    transition: fill .2s linear;
+}
+
+.account__icon__letter {
+    transition: fill .2s linear;
+}
+
+.account__icon:hover .account__icon__circle {
+    fill: #2B788B;
+}
+
+.account__icon:hover .account__icon__letter {
+    fill: #ffffff;
+}
+
+.account__svg {
+    width: 40px;
+    height: 40px;
+}
+
+.account__name {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600; 
+    margin-right: 30px;
+    transition: color .2s linear;
+}
+
+.account__name:hover {
+    color: #000000;
+}
+
+.sign {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color .2s linear;
+}
+
+.sign:hover  {
+    color: #000000;
+}
+
+.burger {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 25px;
+    border: 0;
+    background-color: transparent;
+}
+
+
+
+.burger__item {
+    transition: background-color .2s linear;
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: #585858;
+    left: 0;
+}
+
+.burger__item::before, .burger__item::after {
+    transition: background-color .2s linear;
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #585858;
+}
+
+.burger__item::before {
+    top: -8px;
+}
+
+.burger__item::after {
+    bottom: -8px;
+}
+
+.burger:hover .burger__item {
+    background-color: #000000;
+}
+
+.burger:hover .burger__item::after {
+    background-color: #000000;
+}
+
+.burger:hover .burger__item::before {
+    background-color: #000000;
+}
+
+@media(max-width: 1830px) {
+    .container {
+        margin: 0 250px;
+    }
+}
+
+@media(max-width: 1720px) {
+    .container {
+        margin: 0 180px;
+    }
+}
+
+@media(max-width: 1630px) {
+    .container {
+        margin: 0 150px;
+    }
+}
+
+@media(max-width: 1400px) {
+    .container {
+        margin: 0 120px;
+    }
+
+    
+}
+
+@media(max-width: 1260px) {
+    .container {
+        margin: 0 100px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .container {
+        margin: 0 70px;
+    }
+
+    .header__inner {
+        padding: 15px 0;
+    }
+
+    .nav__logo {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .nav__link {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    .account__svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .account__name {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .sign {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .container {
+        margin: 0 50px;
+    }
+
+    .header__inner {
+        padding: 15px 0;
+    }
+
+    .nav__logo {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .nav__link {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    .account__svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .account__name {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .sign {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 775px) {
+    .container {
+        margin: 0 50px;
+    }
+
+    .nav {
+        height: 0;
+        width: 120px;
+        opacity: 0;
+        transition: height .4s linear, opacity .4s linear;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        background-color: #b1aeae;
+        border-radius: 14px;
+        padding-left: 20px;
+    }
+
+    .games__list {
+        width: 120px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #b1aeae;
+    }
+
+    .game__link {
+        margin-bottom: 10px;
+        color: #585858;
+    }
+
+    .header.fixed .nav__link {
+        color: #585858;
+        
+    }
+
+    .header.fixed .strela__stroke {
+        stroke: #585858;
+    }
+
+    .header__inner {
+        padding: 7px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header.fixed .burger__item {
+        background-color: #E0E0E0;
+    }
+
+    .header.fixed .burger__item::after {
+        background-color: #E0E0E0;
+    }
+
+    .header.fixed .burger__item:before {
+        background-color: #E0E0E0;
+    }
+
+
+    .header.fixed .burger__item::after {
+        background-color: #E0E0E0;
+    }
+
+    .header.fixed .burger__item:before {
+        background-color: #E0E0E0;
+    }
+
+    .header.fixed .burger:hover .burger__item {
+        background-color: #000000;
+    }
+
+    .header.fixed .burger:hover .burger__item:after {
+        background-color: #000000;
+    }
+
+    .header.fixed .burger:hover .burger__item:before {
+        background-color: #000000;
+    }
+
+
+    .nav.active {
+        opacity: 1;
+        background-color: #b1aeae;
+        width: 120px;
+        height: 90px;
+        
+        border-radius: 14px;
+    }
+
+    .nav__logo {
+        display: none;
+    }
+
+    .nav__link {
+        color: transparent;
+        pointer-events: none;
+        transition: none;
+    }
+
+    .nav__link--games {
+        color: transparent;
+        pointer-events: none;
+        transition: none;
+    }
+
+    .strela__stroke {
+        stroke: transparent;
+        pointer-events: none;
+        transition: none;
+    }
+
+    .nav__link.active {
+        color: transparent;
+        pointer-events: none;
+        transition: none;
+    }
+
+    .nav.active .nav__link {
+        pointer-events: auto;
+        margin-bottom: 10px;
+        color: #585858;
+        transition: all .2s linear;
+    }
+
+    .nav.active .nav__link--games {
+        pointer-events: auto;
+        margin-bottom: 10px;
+        color: #585858;
+    }
+
+    .nav.active .nav__link.active {
+        pointer-events: auto;
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    .nav.active .strela__stroke {
+        pointer-events: auto;
+        margin-bottom: 10px;
+        stroke: #585858;
+        transition: all .2s linear;
+    }
+
+    .nav.active .nav__link:last-child {
+        margin-bottom: 0px;
+    }
+
+    .nav.active .nav__link:hover {
+        color: #000000;
+    }
+
+    .nav.active .strela__stroke {
+        stroke: #000000;
+    }
+
+    .account__svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .account__name {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .sign {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 575px) {
+    .container {
+        margin: 0 30px;
+    }
+}
+
+@media(max-width: 360px) {
+    .container {
+        margin: 0 20px;
+    }
+
+    .header__inner {
+        padding: 5px 0;
+    }
+
+    .burger {
+        width: 25px;
+
+    }
+
+    .burger__item {
+        width: 25px;
+        height: 2px;
+    }
+
+    .burger__item::after {
+        width: 25px;
+        height: 2px;
+        bottom: -6px;
+    }
+
+    .burger__item::before {
+        width: 25px;
+        height: 2px;
+        top: -6px;
+    }
+
+    .account__icon {
+        margin-right: 7px;
+    }
+
+    .account__svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .account__name {
+        font-size: 10px;
+        margin-right: 7px;
+
+    }
+
+    .sign {
+        font-size: 10px;
+    }
+}

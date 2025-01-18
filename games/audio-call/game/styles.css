@@ -1,0 +1,274 @@
+@import url('../../../header.css');
+
+@import url('../../../footer.css');
+
+body {
+    background-color: #F6F5F4;
+}
+
+.audio__content {
+    padding-top: 188px;
+    text-align: center;
+}
+
+.play {
+    transition: background-color .2s linear, color .2s linear;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 4px solid #2B788B;
+    color: #2B788B;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    position: relative;
+    
+}
+
+.play__svg__2 {
+    transition: fill .2s linear;
+}
+
+.play:hover .play__svg__2 {
+    fill: #FFFFFF;
+}
+
+.play:hover {
+    background-color: #2B788B;
+    color: #ffffff;
+}
+
+
+.play__text {
+    font-size: 18px;
+    line-height: 25.2px;
+}
+
+.food {
+    display: none;
+}
+
+.music {
+    display: none;
+    position: absolute;
+    padding: 10px 22px;
+    background-color: #FFFFFF;
+    border-radius: 88px;
+    width: 200px;
+    bottom: -41px;
+}
+
+.music__name {
+    
+    display: flex;
+    
+    font-weight: 600;
+    
+}
+
+.music__name1 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.7px;
+    color: #000;
+}
+
+.music__name2 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.7px;
+}
+
+.music__image {
+    margin-right: 12px;
+}
+
+.music__img {
+    width: 19.2px;
+    height: 20.18px;
+    padding: 10px;
+    background-color: #F6F5F4;
+    color: #000;
+}
+
+.hearts {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.fa-heart {
+    margin-right: 10px;
+    font-size: 32px;
+    color: #A95151;
+}
+
+.fa-heart:last-child {
+    margin-right: 0;
+}
+
+.play__words {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.play__word {
+    background-color: transparent;
+    transition: border-color .2s linear, color .2s linear;
+    cursor: pointer;
+    padding: 14px 13px;
+    border: 3px solid #BABABA;
+    color: #BABABA;
+    border-radius: 100px;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.play__word:hover {
+    border-color: #757575;
+    color: #757575;
+}
+
+.play__word:last-child {
+    margin-right: 0;
+}
+
+.play__btn {
+    transition: background-color .2s linear, color .2s linear;
+    cursor: pointer;
+    background-color: #C3DCE3;
+    border: 0;
+    padding: 14px 22px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #2B788B;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    margin-bottom: 100px;
+}
+
+.play__btn:hover {
+    background-color: #2B788B;
+    color: #FFFFFF;
+}
+
+@media(max-width: 775px) {
+    .audio__content {
+        padding-top: 120px;
+    }
+
+    .play {
+        width: 120px;
+        height: 120px;
+    }
+
+    .play__svg__1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .play__text {
+        font-size: 16px;
+    }
+
+    .hearts {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .fa-heart {
+        
+        font-size: 27px;
+    }
+
+    .play__words {
+        margin-bottom: 30px;
+    }
+
+    .play__word {
+        font-size: 13px;
+        padding: 10px 10px;
+        margin-right: 10px;
+    }
+
+    .play__btn {
+        font-size: 14px;
+        padding: 12px 18px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 575px) {
+    .audio__content {
+        padding-top: 80px;
+    }
+
+    .play {
+        width: 100px;
+        height: 100px;
+    }
+
+    .play__svg__1 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .play__text {
+        font-size: 14px;
+    }
+
+    .hearts {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .fa-heart {
+        margin-right: 7px;
+        font-size: 22px;
+    }
+
+    .play__words {
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .play__word {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        padding: 7px 5px;
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .play__word:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .play__btn {
+        font-size: 14px;
+        padding: 12px 18px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 360px) {
+    .play__words {
+        margin-bottom: 10px;
+    }
+
+    .play__btn {
+        font-size: 12px;
+        padding: 10px 16px;
+        margin-bottom: 10px;
+    }
+}
